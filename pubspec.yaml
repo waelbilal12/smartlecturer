@@ -1,0 +1,41 @@
+name: special_needs_app
+description: تطبيق لذوي الاحتياجات الخاصة (إعاقة سمعية وبصرية)
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  permission_handler: ^12.0.1
+  path_provider: ^2.1.5
+  flutter_sound: ^9.3.13
+  shared_preferences: ^2.5.3
+  onnxruntime: ^1.4.1 # لتشغيل نموذج الذكاء الاصطناعي
+  file_picker: ^8.0.5 
+  flutter_launcher_icons: ^0.13.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.png
+    - assets/silero_vad.onnx
+
+# أضف هذا القسم بالكامل في نهاية الملف
+flutter_launcher_icons:
+  android: true # تفعيل التوليد لأندرويد
+  ios: true # يمكنك تعطيلها بوضع false إذا أردت
+  image_path: "assets/images/logo.png" # <--- ضع هنا المسار الصحيح لصورة الشعار
+
+  # إعدادات خاصة بـ Adaptive Icons (لإصدارات أندرويد 8.0 فما فوق)
+  #adaptive_icon_background: "#FFFFFF" # <--- ضع هنا لون خلفية الشعار (مثلاً أبيض)
+  adaptive_icon_foreground: "assets/images/logo.png" # الشعار نفسه سيكون في المقدمة
+    
